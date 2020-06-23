@@ -13,15 +13,28 @@
       background-color: black;
       font-family: Karla, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   }
-  h2{
+  h1{
+    color: white;
     font-size: 2.5em;
+    font-weight: bold;
+    margin: 15px 0px;
+  }
+  h2{
+    font-size: 2em;
     text-decoration: underline;
     text-transform: uppercase;
   }
 
   header{
       display: flex;
+      flex-direction: column;
       justify-content: center;
+      align-items: center;
+      margin-top: 10px;
+  }
+  header img{
+    background-color: white;
+    /* width: 100%; */
   }
   .container-fluid{
     padding: 5px 20px;
@@ -38,13 +51,12 @@
 .leaderCard{
     margin: 0px;
     border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 0px;
 }
 .wrapper{
     width: 75%;
     height: 100%;
+    margin: 0px auto;
     border: 1px solid black;
     border-radius: 10px;
 }
@@ -59,17 +71,22 @@
 }
 .profilePicture{
     width: 100%;
-    /* position: relative; */
     border-radius: 10px 10px 0px 0px;
+}
+.winnerUsername{
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0px;
+  padding: 0px;
 }
 .leaderCaption{
     padding: 0px;
-    margin: 10px 0px;
+    margin: 5px 0px 10px 0px;
 }
 .rank{
     padding: 0px;
     margin: 0px;
-    text-align: right;
+    text-align: center;
     align-items: center;
     justify-content: center;
 }
@@ -82,12 +99,7 @@
     padding: 0px;
     align-self: center;
 }
-/* .topScore h3{
-    font-size: 2.5em;
-    font-weight: bold;
-    margin: 0px;
-    padding: 0px;
-} */
+
 .topScore p{
     font-size: 2.5em;
     margin: 0px;
@@ -100,9 +112,215 @@
     line-height: 1em;
 }
 
+  .nav-pills-custom .nav-link {
+    color: black;
+    background: #fff;
+    position: relative;
+    width: 100%;
+    font-size: 1.5em;
+    font-family: 'Karla';
+    font-weight: 600;
+  }
+
+ .nav-pills-custom .nav-link.active {
+    color: black;
+    background: rgb(129, 163, 238);
+  }
+  .nav-pills-custom .nav-link:hover{
+    background-color: lightgreen;
+  }
+
+  .fade{
+    transition-duration: 0s;
+  }
+
+ table
+{
+    counter-reset: rowNumber;
+}
+
+table tr > td:first-child
+{
+    counter-increment: rowNumber;
+}
+
+table tr td:first-child::before
+{
+    content: counter(rowNumber);
+    min-width: 1em;
+    margin-right: 0.5em;
+}
 
 
+@media (max-width: 480px) {
+  .nav-pills-custom .nav-link { 
+    font-size: 1.25em;
+  }
+  #sidebar{
+    padding: 0px;
+    margin: 0px 15px;
+  }
+  #pageLogo{
+    width: 100%;
+  }
+  .topThreeDiv{
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+}
+.leaderCard{
+    margin: 0px auto;
+    border-radius: 10px;
+    /* padding: 5px 0px; */
+    border: none;
+}
+.wrapper{
+    width: 95%;
+    margin: 5px auto;
+    border: 1px solid none;
+    border-radius: 10px;
+}
+.firstPosition .wrapper{
+    background-color: gold;
+}
+.secondPosition .wrapper{
+    background-color: silver;
+}
+.thirdPosition .wrapper{
+    background-color: burlywood;
+}
+.profilePicture{
+    width: 75%;
+    border-radius: 10px 10px 0px 0px;
+}
+.winnerUsername{
+  font-size: 1.25em;
+  font-weight: bold;
+  margin: 0px;
+  padding: 0px;
+}
+.leaderCaption{
+    padding: 0px;
+    margin: 5px 0px 10px 0px;
+    
+}
+.rank{
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+.rank img{
+    width: 50%;
+}
+.topScore{
+    width: 50%;
+    margin: 0px;
+    padding: 0px;
+    align-self: center;
+}
 
+.topScore p{
+    font-size: 2em;
+    margin: 0px;
+    padding: 0px;
+    text-align: left;
+}
+.tracks{
+    font-size: 1.25em;
+    font-weight: bold;
+    line-height: 1em;
+}
+
+}
+
+  @media (min-width: 768px) {
+    .nav-pills-custom .nav-link::before {
+        content: '';
+        display: block;
+        border-top: 8px solid transparent;
+        border-left: 10px solid #fff;
+        border-bottom: 8px solid transparent;
+        position: absolute;
+        top: 50%;
+        right: -10px;
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+    .text-uppercase{
+      font-size: 0.75em;
+    }
+  }
+  
+  .nav-pills-custom .nav-link.active::before {
+    opacity: 1;
+  }
+  
+  @media (min-width:768px) and (max-width:1096px){
+  
+  
+    .nav-pills-custom .nav-link {
+      /* width: 98%; */
+    }
+  
+    .font-weight-bold{
+      font-size: 1.5em;
+    }
+     
+    #pageLogo{
+      width: 50%;
+    }
+
+    .leaderCaption{
+      padding: 0px;
+      margin: 5px 0px 10px 0px;
+      display: flex;
+      
+  }
+  .rank{
+      padding: 0px;
+      margin: 0px;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      width: 50%;
+  }
+  .rank img{
+      width: 50%;
+  }
+  .topScore{
+      width: 50%;
+      margin: 0px;
+      padding: 0px;
+      align-self: center;
+  }
+  
+  .topScore p{
+      font-size: 2em;
+      margin: 0px;
+      padding: 0px;
+      text-align: left;
+  }
+  .tracks{
+      font-size: 1em;
+      font-weight: bold;
+      line-height: 1em;
+  }
+  
+  }
+  
+ 
+
+ 
+  
+
+  
+
+
+  
+/* 
   
   #socialMedia{
     display: flex;
@@ -131,130 +349,4 @@
     color: white;
     background-color: white;
   }
-   
-  .nav-pills-custom .nav-link {
-    color: black;
-    background: #fff;
-    position: relative;
-    width: 100%;
-    font-size: 1.5em;
-    font-family: 'Karla';
-    font-weight: 600;
-  }
-
- .nav-pills-custom .nav-link.active {
-    color: black;
-    background: rgb(129, 163, 238);
-  }
-  .nav-pills-custom .nav-link:hover{
-    background-color: lightgreen;
-  }
-
-
-  .fade{
-    transition-duration: 0s;
-  }
-
-  table
-{
-    counter-reset: rowNumber;
-}
-
-table tr > td:first-child
-{
-    counter-increment: rowNumber;
-}
-
-table tr td:first-child::before
-{
-    content: counter(rowNumber);
-    min-width: 1em;
-    margin-right: 0.5em;
-}
-
-  /* table {
-    counter-reset: rowNumber;
-  }
-  
-  table tr::before {
-    display: table-cell;
-    counter-increment: rowNumber;
-    content: counter(rowNumber) ".";
-    padding-right: 0.3em;
-    text-align: right;
-  } */
-
-  /* Add indicator arrow for the active tab */
-  @media (min-width: 768px) {
-    .nav-pills-custom .nav-link::before {
-        content: '';
-        display: block;
-        border-top: 8px solid transparent;
-        border-left: 10px solid #fff;
-        border-bottom: 8px solid transparent;
-        position: absolute;
-        top: 50%;
-        right: -10px;
-        transform: translateY(-50%);
-        opacity: 0;
-    }
-  }
-  
-  .nav-pills-custom .nav-link.active::before {
-    opacity: 1;
-  }
-  
-  @media (min-width:768px) and (max-width:1096px){
-  
-  
-    .nav-pills-custom .nav-link {
-      width: 98%;
-    }
-  
-    .font-weight-bold{
-      font-size: 1.5em;
-    }
-     
-    #pageLogo{
-      width: 50%;
-    }
-  }
-  
-  @media (max-width: 766px){
-    #pageLogo{
-      width: 50%;
-    }
-    #gbosaImage{
-      width: 100%;
-    }
-  
-    #socialMedia{
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      align-items: center;
-      font-weight: bolder;
-      padding: 1px;
-      margin: 0px;
-    }
-    #socialMedia p{
-      margin: 0px;
-      padding: 0px;
-      font-size: 1.5em;
-    }
-    #socialMedia div{
-      margin: 0px;
-      padding: 0px;
-    }
-    
-    
-    .icon{
-      width: 1em;
-      height: 1em;
-      margin: 5px;
-      color: white;
-      background-color: white;
-    }
-  }
-
-  
+    */
