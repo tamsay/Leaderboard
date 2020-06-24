@@ -4,6 +4,7 @@ var dataSet = [
     [ "","Ashton Cox", "@cox", "cox@gmail.com", "1562", ['backend', 'design']],
     [ "","Cedric Kelly", "@cedric", "cedric@yahoo.com", "6224", ['frontend', 'backend', 'design']],
     [ "","Airi Satou", "@airi", "airi@gmail.com", "5407", ['frontend', 'backend', 'design'] ],
+    
 ];
 
 let sortedResult=(data)=>{
@@ -14,10 +15,27 @@ let sortedResult=(data)=>{
 }
 
 let sortedData = sortedResult(dataSet);
-let designResult = Array.from(sortedData)
-let frontendResult = Array.from(sortedData)
-let backendResult = Array.from(sortedData)
 
+let frontendResult = []
+let backendResult = []
+let designResult = []
+
+let filterResult =(array)=>{
+    let answer = array.map(element=>{
+        for(let x=0; x < element[5].length; x++){
+            if ((element[5][x]).toLowerCase() === 'frontend'){
+                frontendResult.push(element)
+            }
+            else if ((element[5][x]).toLowerCase() === 'backend'){
+                backendResult.push(element)
+            }
+            else{
+                designResult.push(element)
+            }
+        }
+    })
+}
+filterResult(sortedData)
 
 let overallWinner = document.querySelector('#overallWinner')
 overallWinner.innerText = sortedData[0][2]
@@ -99,7 +117,7 @@ $(document).ready(function() {
 $(document).ready(function() {
     $('#designTable').DataTable( {
         "scrollX": true,
-        data: sortedData,
+        data: designResult,
         columns: [
             {title: "S/N"},
             { title: "Name" },
@@ -113,7 +131,7 @@ $(document).ready(function() {
 $(document).ready(function() {
     $('#frontendTable').DataTable( {
         "scrollX": true,
-        data: sortedData,
+        data: frontendResult,
         columns: [
             {title: "S/N"},
             { title: "Name" },
@@ -127,7 +145,7 @@ $(document).ready(function() {
 $(document).ready(function() {
     $('#backendTable').DataTable( {
         "scrollX": true,
-        data: sortedData,
+        data: backendResult,
         columns: [
             {title: "S/N"},
             { title: "Name" },

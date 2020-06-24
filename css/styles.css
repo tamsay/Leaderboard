@@ -101,10 +101,14 @@
 }
 
 .topScore p{
-    font-size: 2.5em;
+    font-size: 2em;
     margin: 0px;
     padding: 0px;
     text-align: left;
+}
+.topScore p span:last-child{
+  font-size: 0.75em;
+  /* display: none; */
 }
 .tracks{
     font-size: 1.25em;
@@ -298,7 +302,7 @@ table tr td:first-child::before
   }
   
   .topScore p{
-      font-size: 2em;
+      font-size: 1.2em;
       margin: 0px;
       padding: 0px;
       text-align: left;
