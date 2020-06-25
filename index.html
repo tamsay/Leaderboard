@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" media="screen" href="particles/style.css">
+    <!-- <link rel="stylesheet" media="screen" href="particles/style.css"> -->
+    <!-- <link rel="stylesheet" href="font-awesome.min.css"> -->
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -13,20 +14,53 @@
 </head>
 <body>
 
-    <!-- <div id="particles-js"></div> -->
-        <header>
-            <img src="images/hng2.png" id="pageLogo">
-            <h1>Leaderboard</h1>
+      <!-- <div id="particles-js"></div> -->
+      <header>
+        <img src="images/hng2.png" id="pageLogo">
+        <h1>Leaderboard</h1>
+    </header>
 
-        </header>
+  <div class="row" id="mobileMenu">
+    
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#m-pills-tab" aria-controls="v-pills-tab" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    <nav class="nav nav-pills nav-pills-custom  collapse navbar-collapse" id="m-pills-tab" role="tablist" aria-orientation="vertical">
+
+        <a class="nav-link mb-2 p-2 shadow active" id="m-pills-overall-tab" data-toggle="pill" href="#v-pills-overall" role="tab" aria-controls="v-pills-overall" aria-selected="true">
+            <i class="fa fa-user-circle-o mr-2"></i>
+            <span class=" large text-uppercase">Overall</span></a>
+
+        <a class="nav-link mb-2 p-2 shadow" id="m-pills-design-tab" data-toggle="pill" href="#v-pills-design" role="tab" aria-controls="v-pills-design" aria-selected="false">
+            <i class="fa fa-calendar-minus-o mr-2"></i>
+            <span class=" large text-uppercase">Design</span></a>
+
+        <a class="nav-link mb-2 p-2 shadow" id="m-pills-frontend-tab" data-toggle="pill" href="#v-pills-frontend" role="tab" aria-controls="v-pills-frontend" aria-selected="false">
+            <i class="fa fa-star mr-2"></i>
+            <span class="  text-uppercase">Frontend</span></a>
+        
+        <a class="nav-link mb-2 p-2 shadow" id="m-pills-backend-tab" data-toggle="pill" href="#v-pills-backend" role="tab" aria-controls="v-pills-backend" aria-selected="false">
+          <i class="fa fa-star mr-2"></i>
+          <span class=" text-uppercase">Backend</span></a>
+        </nav>
+</div>
+
+
+
+       
 
       <section class="py-0 header">
         
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-2" id="sidebar">
+
+                  <!-- Collapse button -->
+                  <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#v-pills-tab" aria-controls="v-pills-tab" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button> -->
                     <!-- Tabs nav -->
-                    <div class="nav flex-column nav-pills nav-pills-custom" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <nav class="nav nav-pills nav-pills-custom" id="v-pills-tab" role="tablist" aria-orientation="vertical">
 
                         <a class="nav-link mb-2 p-2 shadow active" id="v-pills-overall-tab" data-toggle="pill" href="#v-pills-overall" role="tab" aria-controls="v-pills-overall" aria-selected="true">
                             <i class="fa fa-user-circle-o mr-2"></i>
@@ -44,7 +78,7 @@
                           <i class="fa fa-star mr-2"></i>
                           <span class=" text-uppercase">Backend</span></a>
                                 
-                        </div>
+                        </nav>
                 </div>
                       
                 <div class="col-md-10" id="mainDiv">
@@ -56,51 +90,51 @@
 
                             <div class="row topThreeDiv">
 
-                                <div class="col leaderCard firstPosition">
-                                    <div class="wrapper">
+                                <div id="overallWinnerDiv" class="col leaderCard firstPosition">
+                                  <div class="wrapper">
                                         <img src="images/profileicon.png" alt="images" class="profilePicture">
-                                        <p class="winnerUsername" id="overallWinner"></p>
+                                        <p class="winnerUsername" id="overallWinner">&nbsp;</p>
                                   <div class="row leaderCaption">
                                     <div class="col-md-6 rank"><img src="images/first.jpg" alt="rank">
                                     </div>
                                     <div class="col-sm topScore">
-                                        <p> <span id ='overallWinnerScore'></span><span>pts</span></p>
+                                        <p> <span id ='overallWinnerScore'>0</span><span>pts</span></p>
                                     </div>
                                     </div>
-                                  <p class="tracks">Tracks:<br><span>Frontend, Design, Backend</span></p>
+                                  <p class="tracks">Tracks:<br><span>&nbsp</span></p>
                                     </div>
                                   
                                 </div>
 
-                                <div class="col leaderCard secondPosition">
+                                <div id= 'overallSecondDiv' class="col leaderCard secondPosition">
                                     <div class="wrapper">
                                     <img src="images/profileicon.png" alt="images" class="profilePicture">
-                                    <p class="winnerUsername" id="overallSecond"></p>
+                                    <p class="winnerUsername" id="overallSecond">&nbsp;</p>
 
                                     <div class="row leaderCaption">
                                       <div class="col-md-6 rank"><img src="images/second.jpg" alt="rank">
                                       </div>
                                       <div class="col-sm topScore">
-                                        <p> <span id ='overallSecondScore'></span><span>pts</span></p>
+                                        <p> <span id ='overallSecondScore'>0</span><span>pts</span></p>
                                       </div>
                                       </div>
-                                    <p class="tracks">Tracks:<br><span>Frontend, Design, Backend</span></p>
+                                    <p class="tracks">Tracks:<br><span>&nbsp</span></p>
                                     </div>
                                   </div>
 
-                                  <div class="col leaderCard thirdPosition">
+                                  <div id="overallThirdDiv" class="col leaderCard thirdPosition">
                                     <div class="wrapper">
                                     <img src="images/profileicon.png" alt="images" class="profilePicture">
-                                    <p class="winnerUsername" id="overallThird"></p>
+                                    <p class="winnerUsername" id="overallThird">&nbsp;</p>
 
                                     <div class="row leaderCaption">
                                       <div class="col-md-6 rank"><img src="images/third.jpg" alt="rank">
                                       </div>
                                       <div class="col-sm topScore">
-                                        <p> <span id ='overallThirdScore'></span><span>pts</span></p>
+                                        <p> <span id ='overallThirdScore'>0</span><span>pts</span></p>
                                       </div>
                                       </div>
-                                    <p class="tracks">Tracks:<br><span>Frontend, Design, Backend</span></p>
+                                    <p class="tracks">Tracks:<br><span></span></p>
                                     </div>
                                   </div>
                             </div>
@@ -116,51 +150,51 @@
 
                             <div class="row topThreeDiv">
 
-                              <div class="col leaderCard firstPosition">
+                              <div id="firstInDesignDiv" class="col leaderCard firstPosition">
                                   <div class="wrapper">
                                       <img src="images/profileicon.png" alt="images" class="profilePicture">
-                                      <p class="winnerUsername" id="firstInDesign">Username</p>
+                                      <p class="winnerUsername" id="firstInDesign"></p>
                                 <div class="row leaderCaption">
                                   <div class="col-md-6 rank"><img src="images/first.jpg" alt="rank">
                                   </div>
                                   <div class="col-sm topScore">
-                                    <p> <span id ='firstInDesignScore'></span><span>pts</span></p>
+                                    <p> <span id ='firstInDesignScore'>0</span><span>pts</span></p>
                                   </div>
                                   </div>
-                                <p class="tracks">Tracks:<br><span>Frontend, Design, Backend</span></p>
+                                <p class="tracks">Tracks:<br><span>&nbsp</span></p>
                                   </div>
                                 
                               </div>
 
-                              <div class="col leaderCard secondPosition">
+                              <div id="secondInDesignDiv" class="col leaderCard secondPosition">
                                   <div class="wrapper">
                                   <img src="images/profileicon.png" alt="images" class="profilePicture">
-                                  <p class="winnerUsername" id="secondInDesign">Username</p>
+                                  <p class="winnerUsername" id="secondInDesign"></p>
 
                                   <div class="row leaderCaption">
                                     <div class="col-md-6 rank"><img src="images/second.jpg" alt="rank">
                                     </div>
                                     <div class="col-sm topScore">
-                                      <p> <span id ='secondInDesignScore'></span><span>pts</span></p>
+                                      <p> <span id ='secondInDesignScore'>0</span><span>pts</span></p>
                                     </div>
                                     </div>
-                                  <p class="tracks">Tracks:<br><span>Frontend, Design, Backend</span></p>
+                                  <p class="tracks">Tracks:<br><span>&nbsp</span></p>
                                   </div>
                                 </div>
 
-                                <div class="col leaderCard thirdPosition">
+                                <div id="thirdInDesignDiv" class="col leaderCard thirdPosition">
                                   <div class="wrapper">
                                   <img src="images/profileicon.png" alt="images" class="profilePicture">
-                                  <p class="winnerUsername" id="thirdInDesign">Username</p>
+                                  <p class="winnerUsername" id="thirdInDesign"></p>
 
                                   <div class="row leaderCaption">
                                     <div class="col-md-6 rank"><img src="images/third.jpg" alt="rank">
                                     </div>
                                     <div class="col-sm topScore">
-                                      <p> <span id ='thirdInDesignScore'></span><span>pts</span></p>
+                                      <p> <span id ='thirdInDesignScore'>0</span><span>pts</span></p>
                                     </div>
                                     </div>
-                                  <p class="tracks">Tracks:<br><span>Frontend, Design, Backend</span></p>
+                                  <p class="tracks">Tracks:<br><span>&nbsp</span></p>
                                   </div>
                                 </div>
                           </div>
@@ -176,51 +210,51 @@
 
                             <div class="row topThreeDiv">
 
-                              <div class="col leaderCard firstPosition">
+                              <div id="firstInFrontendDiv" class="col leaderCard firstPosition">
                                   <div class="wrapper">
                                       <img src="images/profileicon.png" alt="images" class="profilePicture">
-                                      <p class="winnerUsername" id="firstInFrontend">Username</p>
+                                      <p class="winnerUsername" id="firstInFrontend"></p>
                                 <div class="row leaderCaption">
                                   <div class="col-md-6 rank"><img src="images/first.jpg" alt="rank">
                                   </div>
                                   <div class="col-sm topScore">
-                                    <p> <span id ='firstInFrontendScore'></span><span>pts</span></p>
+                                    <p> <span id ='firstInFrontendScore'>0</span><span>pts</span></p>
                                   </div>
                                   </div>
-                                <p class="tracks">Tracks:<br><span>Frontend, Design, Backend</span></p>
+                                <p class="tracks">Tracks:<br><span>&nbsp</span></p>
                                   </div>
                                 
                               </div>
 
-                              <div class="col leaderCard secondPosition">
+                              <div id="secondInFrontendDiv" class="col leaderCard secondPosition">
                                   <div class="wrapper">
                                   <img src="images/profileicon.png" alt="images" class="profilePicture">
-                                  <p class="winnerUsername" id="secondInFrontend">Username</p>
+                                  <p class="winnerUsername" id="secondInFrontend"></p>
 
                                   <div class="row leaderCaption">
                                     <div class="col-md-6 rank"><img src="images/second.jpg" alt="rank">
                                     </div>
                                     <div class="col-sm topScore">
-                                      <p> <span id ='secondInFrontendScore'></span><span>pts</span></p>
+                                      <p> <span id ='secondInFrontendScore'>0</span><span>pts</span></p>
                                     </div>
                                     </div>
-                                  <p class="tracks">Tracks:<br><span>Frontend, Design, Backend</span></p>
+                                  <p class="tracks">Tracks:<br><span>&nbsp</span></p>
                                   </div>
                                 </div>
 
-                                <div class="col leaderCard thirdPosition">
+                                <div id="thirdInFrontendDiv" class="col leaderCard thirdPosition">
                                   <div class="wrapper">
                                   <img src="images/profileicon.png" alt="images" class="profilePicture">
-                                  <p class="winnerUsername" id="thirdInFrontend">Username</p>
+                                  <p class="winnerUsername" id="thirdInFrontend"></p>
 
                                   <div class="row leaderCaption">
                                     <div class="col-md-6 rank"><img src="images/third.jpg" alt="rank">
                                     </div>
                                     <div class="col-sm topScore">
-                                      <p> <span id ='thirdInFrontendScore'></span><span>pts</span></p>
+                                      <p> <span id ='thirdInFrontendScore'>0</span><span>pts</span></p>
                                     </div>
                                     </div>
-                                  <p class="tracks">Tracks:<br><span>Frontend, Design, Backend</span></p>
+                                  <p class="tracks">Tracks:<br><span>&nbsp</span></p>
                                   </div>
                                 </div>
                           </div>
@@ -235,51 +269,51 @@
 
                           <div class="row topThreeDiv">
 
-                            <div class="col leaderCard firstPosition">
+                            <div id="firstInBackendDiv" class="col leaderCard firstPosition">
                                 <div class="wrapper">
                                     <img src="images/profileicon.png" alt="images" class="profilePicture">
-                                    <p class="winnerUsername" id="firstInBackend">Username</p>
+                                    <p class="winnerUsername" id="firstInBackend"></p>
                               <div class="row leaderCaption">
                                 <div class="col-md-6 rank"><img src="images/first.jpg" alt="rank">
                                 </div>
                                 <div class="col-sm topScore">
-                                  <p> <span id ='firstInBackendScore'></span><span>pts</span></p>
+                                  <p> <span id ='firstInBackendScore'>0</span><span>pts</span></p>
                                 </div>
                                 </div>
-                              <p class="tracks">Tracks:<br><span>Frontend, Design, Backend</span></p>
+                              <p class="tracks">Tracks:<br><span>&nbsp</span></p>
                                 </div>
                               
                             </div>
 
-                            <div class="col leaderCard secondPosition">
+                            <div id="secondInBackendDiv" class="col leaderCard secondPosition">
                                 <div class="wrapper">
                                 <img src="images/profileicon.png" alt="images" class="profilePicture">
-                                <p class="winnerUsername" id="secondInBackend">Username</p>
+                                <p class="winnerUsername" id="secondInBackend"></p>
 
                                 <div class="row leaderCaption">
                                   <div class="col-md-6 rank"><img src="images/second.jpg" alt="rank">
                                   </div>
                                   <div class="col-sm topScore">
-                                    <p> <span id ='secondInBackendScore'></span><span>pts</span></p>
+                                    <p> <span id ='secondInBackendScore'>0</span><span>pts</span></p>
                                   </div>
                                   </div>
-                                <p class="tracks">Tracks:<br><span>Frontend, Design, Backend</span></p>
+                                <p class="tracks">Tracks:<br><span>&nbsp</span></p>
                                 </div>
                               </div>
 
-                              <div class="col leaderCard thirdPosition">
+                              <div id="thirdInBackendDiv" class="col leaderCard thirdPosition">
                                 <div class="wrapper">
                                 <img src="images/profileicon.png" alt="images" class="profilePicture">
-                                <p class="winnerUsername" id="thirdInBackend">Username</p>
+                                <p class="winnerUsername" id="thirdInBackend">&nbsp;</p>
 
                                 <div class="row leaderCaption">
                                   <div class="col-md-6 rank"><img src="images/third.jpg" alt="rank">
                                   </div>
                                   <div class="col-sm topScore">
-                                    <p> <span id ='thirdInBackendScore'></span><span>pts</span></p>
+                                    <p> <span id ='thirdInBackendScore'>0</span><span>pts</span></p>
                                   </div>
                                   </div>
-                                <p class="tracks">Tracks:<br><span>Frontend, Design, Backend</span></p>
+                                <p class="tracks">Tracks:<br><span>&nbsp</span></p>
                                 </div>
                               </div>
                         </div>
@@ -309,11 +343,11 @@
 
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/jquery.dataTables.min.js"></script>
+    <script src="js/dataTables.bootstrap4.min.js"></script>
     <script src="https://use.fontawesome.com/84fe0d4adf.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <!-- <script src="particles/particles.js"></script>
     <script src="particles/app.js"></script> -->
-    <script src="js/jquery.dataTables.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

@@ -24,6 +24,11 @@
     text-decoration: underline;
     text-transform: uppercase;
   }
+.navbar-toggler-icon{
+  background-color: white;
+  font-size: 1.5em;
+  
+}
 
   header{
       display: flex;
@@ -154,18 +159,45 @@ table tr td:first-child::before
     min-width: 1em;
     margin-right: 0.5em;
 }
+.dataTables_wrapper{
+  /* display: flex; */
+  /* overflow-x: auto; */
+  margin: 0px 10px;  
+  /* border: 0.1px solid red; */
+}
+.tableDiv{
+  /* margin: 0px 10px; */
+}
+#mobileMenu{
+  display: none;
+}
+.bg-white{
+  /* background-color: black !important */
+}
 
 
 @media (max-width: 480px) {
+  .container-fluid{
+    padding: 5px 2px;
+  }
   .nav-pills-custom .nav-link { 
     font-size: 1.25em;
+    width: 75%;
+    margin: 0px auto;
   }
   #sidebar{
     padding: 0px;
     margin: 0px 15px;
+    display: none;
+  }
+  #mainDiv{
+    /* width: 100%; */
+  }
+  #mobileMenu{
+    display: block;
   }
   #pageLogo{
-    width: 100%;
+    width: 75%;
   }
   .topThreeDiv{
     margin-bottom: 25px;
@@ -194,7 +226,7 @@ table tr td:first-child::before
     background-color: burlywood;
 }
 .profilePicture{
-    width: 75%;
+    width: 100%;
     border-radius: 10px 10px 0px 0px;
 }
 .winnerUsername{
@@ -239,7 +271,29 @@ table tr td:first-child::before
 }
 
 }
+@media (min-width: 481px) and (max-width: 767px){
+  .topScore p{
+    font-size: 2em;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+.nav-pills-custom .nav-link { 
+  font-size: 1.5em;
+  width: 75%;
+  margin: 0px auto;
+}
 
+#sidebar{
+  padding: 0px;
+  margin: 0px 15px;
+  display: none;
+}
+#mobileMenu{
+  display: block;
+}
+
+}
   @media (min-width: 768px) {
     .nav-pills-custom .nav-link::before {
         content: '';
@@ -256,6 +310,7 @@ table tr td:first-child::before
     .text-uppercase{
       font-size: 0.75em;
     }
+    
   }
   
   .nav-pills-custom .nav-link.active::before {
@@ -302,7 +357,7 @@ table tr td:first-child::before
   }
   
   .topScore p{
-      font-size: 1.2em;
+      font-size: 1.5em;
       margin: 0px;
       padding: 0px;
       text-align: left;
