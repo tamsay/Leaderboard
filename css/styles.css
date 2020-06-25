@@ -25,9 +25,7 @@
     text-transform: uppercase;
   }
 .navbar-toggler-icon{
-  background-color: white;
-  font-size: 1.5em;
-  
+  font-size: 1em;
 }
 
   header{
@@ -39,7 +37,6 @@
   }
   header img{
     background-color: white;
-    /* width: 100%; */
   }
   .container-fluid{
     padding: 5px 20px;
@@ -200,20 +197,19 @@ table tr td:first-child::before
     width: 75%;
   }
   .topThreeDiv{
-    margin-bottom: 25px;
+    margin: 0px 10px 15px 10px;
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
 }
 .leaderCard{
-    margin: 0px auto;
+    margin: 0px 5px ;
     border-radius: 10px;
     /* padding: 5px 0px; */
     border: none;
 }
 .wrapper{
-    width: 95%;
-    margin: 5px auto;
-    border: 1px solid none;
+    width: 100%;
+    /* margin: 5px 20px ; */
     border-radius: 10px;
 }
 .firstPosition .wrapper{
@@ -227,6 +223,8 @@ table tr td:first-child::before
 }
 .profilePicture{
     width: 100%;
+    margin: 0px;
+    padding: 0px;
     border-radius: 10px 10px 0px 0px;
 }
 .winnerUsername{
@@ -237,13 +235,13 @@ table tr td:first-child::before
 }
 .leaderCaption{
     padding: 0px;
-    margin: 5px 0px 10px 0px;
+    margin: 0px 0px 2.5px 0px;
     
 }
 .rank{
-    padding: 0px;
+    padding: 0px 5px 0px 0px;
     margin: 0px;
-    text-align: center;
+    text-align: right;
     align-items: center;
     justify-content: center;
     width: 50%;
@@ -259,15 +257,164 @@ table tr td:first-child::before
 }
 
 .topScore p{
-    font-size: 2em;
+    font-size: 1.2em;
     margin: 0px;
     padding: 0px;
     text-align: left;
+    font-weight: bold;
 }
 .tracks{
-    font-size: 1.25em;
+    font-size: 0.75em;
     font-weight: bold;
     line-height: 1em;
+    margin: 0px 0px 5px 0px;
+}
+#myTable_wrapper > div:first-child{
+  padding: 0px;
+  margin: 0px;
+}
+#myTable_wrapper > div:first-child > div:first-child{
+  width: 25%;
+  padding: 0px;
+  margin: 0px;
+}
+#myTable_length{
+  padding: 0px;
+  margin: 0px;
+}
+#myTable_length label{
+  padding: 0px;
+  margin: 0px;
+}
+#myTable_wrapper > div:first-child > div:last-child{
+  width: 75%;
+  padding-top: 0px;
+  margin: 0px;
+}
+#myTable_filter{
+  padding: 0px;
+  margin: 0px;
+}
+#myTable_wrapper > div:first-child > div:last-child label{
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+#myTable_wrapper > div:first-child > div:last-child label input{
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+#designTable_wrapper > div:first-child{
+  padding: 0px;
+  margin: 0px;
+}
+#designTable_wrapper > div:first-child > div:first-child{
+  width: 25%;
+  padding: 0px;
+  margin: 0px;
+}
+#designTable_length{
+  padding: 0px;
+  margin: 0px;
+}
+#designTable_length label{
+  padding: 0px;
+  margin: 0px;
+}
+#designTable_wrapper > div:first-child > div:last-child{
+  width: 75%;
+  padding-top: 0px;
+  margin: 0px;
+}
+#designTable_filter{
+  padding: 0px;
+  margin: 0px;
+}
+#designTable_wrapper > div:first-child > div:last-child label{
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+#designTable_wrapper > div:first-child > div:last-child label input{
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+#frontendTable_wrapper > div:first-child{
+  padding: 0px;
+  margin: 0px;
+}
+#frontendTable_wrapper > div:first-child > div:first-child{
+  width: 25%;
+  padding: 0px;
+  margin: 0px;
+}
+#frontendTable_length{
+  padding: 0px;
+  margin: 0px;
+}
+#frontendTable_length label{
+  padding: 0px;
+  margin: 0px;
+}
+#frontendTable_wrapper > div:first-child > div:last-child{
+  width: 75%;
+  padding-top: 0px;
+  margin: 0px;
+}
+#frontendTable_filter{
+  padding: 0px;
+  margin: 0px;
+}
+#frontendTable_wrapper > div:first-child > div:last-child label{
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+#frontendTable_wrapper > div:first-child > div:last-child label input{
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+#backendTable_wrapper > div:first-child{
+  padding: 0px;
+  margin: 0px;
+}
+#backendTable_wrapper > div:first-child > div:first-child{
+  width: 25%;
+  padding: 0px;
+  margin: 0px;
+}
+#backendTable_length{
+  padding: 0px;
+  margin: 0px;
+}
+#backendTable_length label{
+  padding: 0px;
+  margin: 0px;
+}
+#backendTable_wrapper > div:first-child > div:last-child{
+  width: 75%;
+  padding-top: 0px;
+  margin: 0px;
+}
+#backendTable_filter{
+  padding: 0px;
+  margin: 0px;
+}
+#backendTable_wrapper > div:first-child > div:last-child label{
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+#backendTable_wrapper > div:first-child > div:last-child label input{
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
 }
 
 }
