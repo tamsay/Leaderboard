@@ -33,7 +33,7 @@ var dataSet = [
         },        
         "username": "@rani",
         "email": "ranieee@gmail.com",
-        "track": ['Backend', 'Design']
+        "track": ['Backend']
     },
     {
         "sn": "",
@@ -57,7 +57,7 @@ var dataSet = [
         },
         "username": "@shajia",
         "email": "shajia@gmail.com",
-        "track": ['Design', 'Backend'],
+        "track": ['Design', 'Backend', 'Frontend'],
     }
 ];
 
