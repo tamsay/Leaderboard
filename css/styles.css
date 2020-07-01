@@ -191,7 +191,7 @@ table tr td:first-child::before
 
 @media (max-width: 480px) {
   .container-fluid{
-    padding: 5px 2px;
+    /* padding: 5px 2px; */
   }
   .nav-pills-custom .nav-link { 
     font-size: 1.25em;
@@ -205,16 +205,22 @@ table tr td:first-child::before
   }
   #mainDiv{
     /* width: 100%; */
+    padding: 0px;
+    /* margin: 0px; */
   }
   #mobileMenu{
     display: block;
+    margin: 0px;
+    padding: 0px;
   }
  header img{
    display: none;
  }
  .navbar{
   /* display: flex; */
-  padding: 0px 30px;
+  width: 100%;
+  padding: 0px 10px;
+  margin: 0px;
  }
  .navbar-brand{
   width: 50%;
@@ -445,6 +451,9 @@ table tr td:first-child::before
 
 }
 @media (min-width: 481px) and (max-width: 767px){
+  .container-fluid{
+    padding: 0px;
+  }
   .topScore p{
     font-size: 2em;
     margin: 0px;
