@@ -195,7 +195,7 @@ table tr td:first-child::before
   }
   .nav-pills-custom .nav-link { 
     font-size: 1.25em;
-    width: 75%;
+    /* width: 75%; */
     margin: 0px auto;
   }
   #sidebar{
@@ -209,8 +209,18 @@ table tr td:first-child::before
   #mobileMenu{
     display: block;
   }
-  #pageLogo{
-    width: 75%;
+ header img{
+   display: none;
+ }
+ .navbar{
+  /* display: flex; */
+  padding: 0px 30px;
+ }
+ .navbar-brand{
+  width: 50%;
+ }
+  #mobileLogo{
+    width: 100%;
   }
   .topThreeDiv{
     margin: 0px 10px 15px 10px;
@@ -454,6 +464,22 @@ table tr td:first-child::before
 }
 #mobileMenu{
   display: block;
+}
+#mobileMenu{
+  display: block;
+}
+header img{
+ display: none;
+}
+.navbar{
+/* display: flex; */
+padding: 0px 30px;
+}
+.navbar-brand{
+width: 50%;
+}
+#mobileLogo{
+  width: 100%;
 }
 .rank{
   padding: 0px;
